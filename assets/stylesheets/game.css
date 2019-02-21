@@ -1,11 +1,15 @@
 @font-face {
 	font-family: arcadeclassic;
-	src: url('../fonts/ARCADECLASSIC.ttf');
+	src: url('../fonts/ARCADECLASSIC.TTF');
 }
 
 body, html {
 	background: #000;
-	font-family: arcadeclassic;
+	font-family: arcadeclassic, sans-serif;
+}
+
+.icon{
+	height: 30px;
 }
 
 #game {
@@ -21,7 +25,7 @@ body, html {
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none; 
+	user-select: none;
 }
 
 #office {
