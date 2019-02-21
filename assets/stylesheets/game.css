@@ -1,0 +1,10 @@
+#game {
+    background: #261C2A;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.character {
+    height: 50px;
+}
