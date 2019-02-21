@@ -1,82 +1,82 @@
 @font-face {
-	font-family: arcadeclassic;
-	src: url('../fonts/ARCADECLASSIC.TTF');
+  font-family: arcadeclassic;
+  src: url('../fonts/ARCADECLASSIC.TTF');
 }
 
 body, html {
-	background: #000;
-	font-family: arcadeclassic, sans-serif;
+  background: #000;
+  font-family: arcadeclassic, sans-serif;
 }
 
 .icon{
-	height: 30px;
+  height: 30px;
 }
 
 #game {
-	width: 800px;
-	height: 750px;
-	margin-left: auto;
-	margin-right: auto;
-	background-image: url('../images/floor.jpg');
-	background-size: 10rem;
+  width: 800px;
+  height: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('../images/floor.jpg');
+  background-size: 10rem;
 
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #office {
-	height: calc(750px - 4rem);
+  height: calc(750px - 4rem);
 }
 
 #office > .employers {
-	padding: 1rem;
+  padding: 1rem;
 }
 
 #office > .employers > .you {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .stats {
-	background: #ffffff;
-	background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-	background: -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-	background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
 
-	display: flex;
-	height: 4rem;
-	justify-content: space-between;
-	padding-right: 1rem;
-	padding-left: 1rem;
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .stats__money {
-	display: flex;
-	justify-content: space-between;
-	width: 60px;
-	align-items: center;
-	font-size: 19px;
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+  align-items: center;
+  font-size: 19px;
 }
 
 .wall {
-	height: 80px;
-	background-image: url('../images/wall.jpg');
+  height: 80px;
+  background-image: url('../images/wall.jpg');
 }
 
 .character {
-	height: 50px;
-	margin-right: .3rem;
+  height: 50px;
+  margin-right: .3rem;
 }
 
 footer {
-	display: flex;
-	align-self: center;
-	justify-content: center;
-	margin-top: 1rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 1rem;
 }

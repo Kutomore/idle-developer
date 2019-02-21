@@ -9,68 +9,68 @@ const writtenLinesElement = document.getElementById('project-progress');
 const employers = document.querySelector('#office > .employers');
 
 window.onload = function startGame() {
-	document.getElementById('office').addEventListener("click", click);
-	document.getElementById('improve_self').addEventListener("click", improveSelf);
-	document.getElementById('hire_help').addEventListener("click", hireDeveloper);
-	document.getElementById('stage').innerHTML= "You are in the stage "+stage;
-	outsourcedWork();
-	updateMoney();
+  document.getElementById('office').addEventListener("click", click);
+  document.getElementById('improve_self').addEventListener("click", improveSelf);
+  document.getElementById('hire_help').addEventListener("click", hireDeveloper);
+  document.getElementById('stage').innerHTML= "You are in the stage "+stage;
+  outsourcedWork();
+  updateMoney();
 };
 
 function outsourcedWork() {
-	developers.forEach(developer => {
-		if(developer.level > 0) {
-			writtenLines += developer.performance();
-		}
-	});
-	updatePerformance();
-	setTimeout(outsourcedWork, 1000);
+  developers.forEach(developer => {
+    if(developer.level > 0) {
+      writtenLines += developer.performance();
+    }
+  });
+  updatePerformance();
+  setTimeout(outsourcedWork, 1000);
 }
 
 function updateMoney() {
-	moneyElement.innerHTML = '$'+money
+  moneyElement.innerHTML = '$'+money
 }
 
 function updatePerformance() {
-	writtenLinesElement.innerHTML = "You have written " + writtenLines + " lines of code!";
-	if (writtenLines >= project.linesOfCode) {
-		writtenLines = 0;
-		givePayment(project.payment);
-		stage++;
-		project = new Project;
-		stageElement.innerHTML = "You are in the stage: "+stage;
-	}
+  writtenLinesElement.innerHTML = "You have written " + writtenLines + " lines of code!";
+  if (writtenLines >= project.linesOfCode) {
+    writtenLines = 0;
+    givePayment(project.payment);
+    stage++;
+    project = new Project;
+    stageElement.innerHTML = "You are in the stage: "+stage;
+  }
 }
 
 function givePayment(value) {
-	money += value;
-	updateMoney();
+  money += value;
+  updateMoney();
 }
 
 function improveSelf() {
-	if(money >= (Math.pow(click_value, 2))) {
-		money = money - (Math.pow(click_value, 2));
-		updateMoney();
-		click_value++;
-	}
+  if(money >= (Math.pow(click_value, 2))) {
+    money = money - (Math.pow(click_value, 2));
+    updateMoney();
+    click_value++;
+  }
 }
 
 function hireDeveloper() {
-	let developer = developers[helper_count];
-	if(money >= developer.price) {
-		money = money - developer.price;
-		updateMoney();
-		helper_count ++;
-		addNewDeveloper(developer);
-	}
+  let developer = developers[helper_count];
+  if(money >= developer.price) {
+    money = money - developer.price;
+    updateMoney();
+    helper_count ++;
+    addNewDeveloper(developer);
+  }
 }
 
 function click() {
-	writtenLines = writtenLines + click_value;
-	updatePerformance();
+  writtenLines = writtenLines + click_value;
+  updatePerformance();
 }
 
 function addNewDeveloper(developer) {
-	developer.level = 1;
-	employers.innerHTML += '<img alt="' + developer.name + '" class="character" src="assets/images/employers/' + developer.imageName + '.png">'
+  developer.level = 1;
+  employers.innerHTML += '<img alt="' + developer.name + '" class="character" src="assets/images/employers/' + developer.imageName + '.png">'
 }
