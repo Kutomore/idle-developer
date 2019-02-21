@@ -1,4 +1,4 @@
-function Developer(nfirstDeveloperame, price, basePerformance, description, buffs, imageName) {
+function Developer(name, price, basePerformance, description, buffs, imageName) {
   this.name = name;
   this.price = price;
   this.basePerformance = basePerformance;
