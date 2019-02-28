@@ -1,20 +1,33 @@
 @font-face {
-  font-family: arcadeclassic;
-  src: url('../fonts/ARCADECLASSIC.TTF');
+  font-family: PressStart2P-reg;
+  src: url('../fonts/PressStart2P-Regular.ttf');
 }
 
 body, html {
   background: #000;
-  font-family: arcadeclassic, sans-serif;
+  font-family: PressStart2P-reg, sans-serif;
+  display: flex;
+  font-size: x-small;
 }
 
 .icon{
   height: 30px;
 }
 
+#menu{
+  height: 600px;
+  background: #f6f6f6;
+  background: -moz-linear-gradient(45deg, #f6f6f6 0%, #e1e1e1 68.5%, #f1f1f1 68.5%, #ffffff 100%);
+  background: -webkit-linear-gradient(45deg, #f6f6f6 0%,#e1e1e1 68.5%,#f1f1f1 68.5%,#ffffff 100%);
+  background: linear-gradient(45deg, #f6f6f6 0%,#e1e1e1 68.5%,#f1f1f1 68.5%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=1 );
+  border-left: thin black solid;
+  overflow-y: scroll;
+}
+
 #game {
   width: 800px;
-  height: 750px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-image: url('../images/floor.jpg');
@@ -29,14 +42,14 @@ body, html {
 }
 
 #office {
-  height: calc(750px - 4rem);
+  height: 100%;
 }
 
-#office > .employers {
+#office > .employees {
   padding: 1rem;
 }
 
-#office > .employers > .you {
+#office > .employees > .you {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
@@ -69,9 +82,45 @@ body, html {
   background-image: url('../images/wall.jpg');
 }
 
-.character {
+.developer {
+  width: 77px;
   height: 50px;
   margin-right: .3rem;
+}
+
+.developer__menu {
+  display: flex;
+  border-bottom: darkgray thin dashed;
+}
+
+.developer__icon {
+  width: min-content;
+  border-right: darkgray thin dashed;
+  background: thistle;
+}
+
+.developer__icon--inactive {
+  width: min-content;
+  border-right: darkgray thin dashed;
+  background: thistle;
+  opacity: 0.5;
+}
+
+.developer__attributes {
+  width: min-content;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.developer__attribute {
+  width: min-content;
+  margin: 0;
+}
+
+.developer__attribute--inactive {
+  width: min-content;
+  margin: 0;
+  opacity: 0.5;
 }
 
 footer {
