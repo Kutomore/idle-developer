@@ -3,41 +3,80 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel = "stylesheet" type="text/css" href="assets/stylesheets/game.css"/>
+  <link rel = "stylesheet" type="text/css" href="assets/stylesheets/modal.css"/>
   <title>Idle Developer</title>
 </head>
 <body>
-<div id='game'>
-  <div class="stats">
-    <div class="stats__money">
-      <img alt="money icon" src="assets/images/money.png" class="icon">
-      <div id="money"></div>
-    </div>
-    <div class="stage">
-      <div id="stage"></div>
-    </div>
-    <div class="project">
-      <div id="project-length"></div>
-      <div id="project-progress"></div>
-    </div>
-  </div>
-  <div id='office'>
-    <div class="wall"></div>
-    <div class="employers">
-      <div class="you">
-        <img alt="main character" class="character" src="assets/images/main-guy.png">
+  <div id='game'>
+    <div class="stats">
+      <div class="stats__money">
+        <img alt="money icon" src="assets/images/money.png" class="icon">
+        <div id="money"></div>
       </div>
-      <!-- employers here !-->
+      <div class="stage">
+        <div id="stage"></div>
+      </div>
+      <div class="project">
+        <div id="project-length"></div>
+        <div id="project-progress"></div>
+      </div>
+    </div>
+    <div id='office'>
+      <div class="wall"></div>
+      <div class="employees">
+        <div class="you">
+          <img alt="main character" class="developer" src="assets/images/employees/main-guy.png">
+        </div>
+        <!-- employees here !-->
+      </div>
     </div>
   </div>
-</div>
-<footer>
-  <div>
-    <button id='hire_help'>Hire a developer</button>
-    <button id='improve_self'>Improve yourself</button>
+  <div id="menu" class="menu">
+    <div id="developers__menu" class="developers__menu">
+      <div id="main-guy" class="developer__menu">
+        <div class="developer__icon">
+          <img alt="main character" class="developer" src="assets/images/employees/main-guy.png">
+        </div>
+        <div class="developer__attributes">
+          <p class="developer__attribute">Name: Main Guy</p>
+          <p class="developer__attribute">Level: </p>
+          <p class="developer__attribute">Lines/Click: </p>
+          <p class="developer__attribute">Price: </p>
+          <button class="developer__button" >Improve yourself</button>
+        </div>
+      </div>
+    </div>
   </div>
-</footer>
+  <div>
+    <div id="modal" class="modal">
+      <div class="modal--overlay"></div>
+      <div class="modal--content">
+        <div class="modal--top">
+          <h3 id="modal--title" class="modal--title">Welcome to a super modal</h3>
+          <button class="modal-close absolute" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="modal--body">
+          <div class="modal--body--content">
+            <div id="modal--body--icon">
+              <img alt="main character" class="developer" src="assets/images/employees/main-guy.png">
+            </div>
+            <div id="modal--body--description" class="icon">
+              Default
+            </div>
+          </div>
+          <div id="modal--body--buffs" class="modal--body--buffs">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="assets/javascript/developers.js"></script>
 <script src="assets/javascript/projects.js"></script>
+<script src="assets/javascript/modal.js"></script>
 <script src="assets/javascript/game.js"></script>
 </html>
