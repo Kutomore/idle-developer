@@ -80,3 +80,7 @@ footer {
   justify-content: center;
   margin-top: 1rem;
 }
+
+.character {
+  cursor: url(Mouse.cur), default;
+}
