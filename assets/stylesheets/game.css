@@ -81,6 +81,6 @@ footer {
   margin-top: 1rem;
 }
 
-.character {
-  cursor: url(Mouse.cur), default;
+#game:active{
+  cursor: url(crosshair.cur), default;
 }
